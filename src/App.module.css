@@ -32,7 +32,7 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 18%;
-  margin: 10% auto;
+  margin: 13% auto 5% auto;
   box-shadow: 0px 0px 20px rgb(78, 68, 100, 0.8);
   /* border: 3px solid rgb(226, 226, 226); */
   cursor: pointer;
