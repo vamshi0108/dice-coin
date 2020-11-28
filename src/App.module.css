@@ -1,5 +1,5 @@
 .App {
-  /* text-align: center; */
+  text-align: center;
 }
 
 body,
@@ -90,4 +90,36 @@ body {
   bottom: 20%;
   right: 50%;
   margin-right: -107px;
+}
+
+@media only screen and (max-width: 768px) {
+  .dice {
+    margin: 40% auto 5% auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .rollBtn {
+    bottom: 30%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bgdice4 {
+    top: 10%;
+    right: 3%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bgdice3 {
+    bottom: 10%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bgdice2 {
+    top: 5%;
+    left: 3%;
+  }
 }
