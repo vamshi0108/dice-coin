@@ -63,6 +63,7 @@ body {
   height: 400px;
   border-radius: 18%;
   right: 0;
+  bottom: 0;
   position: absolute;
 }
 
