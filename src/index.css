@@ -4,14 +4,13 @@
     url(./fonts/quicksand-v21-latin-regular.woff) format("woff");
 }
 
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Quicksand", "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  user-select: none;
 }
 
 code {
