@@ -58,25 +58,43 @@ const btnVariants = {
   hover: {
     scale: 1.1,
     color: "white",
+    boxShadow: "0px 0px 20px rgb(78, 68, 100, 0.5)",
   },
   tap: {
     scale: 0.9,
     color: "white",
+    boxShadow: "0px 0px 20px rgb(78, 68, 100, 0.8)",
+  },
+};
+
+const diceItemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
   },
 };
 
 class App extends Component {
   state = {
     dummyDice: true,
+    random: 6,
   };
 
   trigger = () => {
-    this.setState({ dummyDice: !this.state.dummyDice });
+    this.setState({ dummyDice: !this.state.dummyDice, random: 6 });
   };
 
   componentDidUpdate() {
     if (!this.state.dummyDice) {
-      this.setState({ dummyDice: !this.state.dummyDice });
+      this.setState({
+        dummyDice: !this.state.dummyDice,
+      });
+      setTimeout(() => {
+        this.setState({
+          random: Math.floor(Math.random() * Math.floor(6)),
+        });
+      }, 2000);
     }
   }
 
@@ -108,12 +126,20 @@ class App extends Component {
         Welcome to Dice-Coin
       </motion.h3> */}
         {this.state.dummyDice && (
-          <motion.div
+          <motion.ul
             variants={diceVariants}
             whileTap="tap"
             whileHover="hover"
             className={classes.dice}
-          ></motion.div>
+          >
+            {[0, 1, 2, 3, 4, 5].slice(this.state.random).map((index) => (
+              <motion.li
+                key={index}
+                className={classes.diceItem}
+                variants={diceItemVariants}
+              />
+            ))}
+          </motion.ul>
         )}
         <motion.button
           variants={btnVariants}
@@ -124,6 +150,9 @@ class App extends Component {
         >
           Roll Dice
         </motion.button>
+        <motion.p className={classes.copy}>
+          &copy; 2020 Vamshi Nagulapally
+        </motion.p>
       </motion.div>
     );
   }
