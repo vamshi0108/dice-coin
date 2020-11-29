@@ -75,7 +75,7 @@ body {
   display: grid;
   list-style: none;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 15px;
   padding: 15px;
   border-radius: 18%;
