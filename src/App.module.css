@@ -76,7 +76,8 @@ body {
   list-style: none;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 15px;
+  row-gap: 70px;
+  column-gap: 10px;
   padding: 15px;
   border-radius: 18%;
   margin: 13% auto 5% auto;
@@ -107,7 +108,6 @@ body {
   right: 50%;
   margin-right: -107px;
 }
-
 
 .copy {
   letter-spacing: 0px;
